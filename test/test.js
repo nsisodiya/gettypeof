@@ -67,15 +67,8 @@ describe('getTypeOf', function () {
   it('Testing Function', function () {
     expect(typeOf(parseFloat)).to.equal("Function");
     expect(typeOf(function () {
-      //
     })).to.equal("Function");
-    expect(typeOf(Add)).to.equal("Function");
-    expect(typeOf(Sub)).to.equal("Function");
-  });
-  it('Testing Function', function () {
-    expect(typeOf(parseFloat)).to.equal("Function");
-    expect(typeOf(function () {
-      //
+    expect(typeOf(() => {
     })).to.equal("Function");
     expect(typeOf(Add)).to.equal("Function");
     expect(typeOf(Sub)).to.equal("Function");
@@ -83,6 +76,9 @@ describe('getTypeOf', function () {
   it('Testing Class', function () {
     expect(typeOf(p1)).to.equal("Person");
     expect(typeOf(e1)).to.equal("Employee");
+  });
+  it('Testing Symbol', function () {
+    expect(typeOf(Symbol("foo"))).to.equal("Symbol");
   });
 });
 

@@ -22,26 +22,29 @@ if(typeOf(x) === "String"){
 }
 ```
 # Input Output Table
-| Run | Output |
-| --- | --- |
-| `typeOf()` | Undefined |
-| `typeOf(undefined)` | Undefined |
-| `typeOf(new Person("Narendra"))`| Employee |
-| `typeOf(new Employee("Deepak", "Developer"))`| Employee |
-| `typeOf("")` | String |
-| `typeOf("---")` | String |
-| `typeOf(null)` | Null |
-| `typeOf({name: "Narendra"})` | Object |
-| `typeOf({})` | Object |
-| `typeOf(3.4)` | Number |
-| `typeOf(new Date())` | Date |
-| `typeOf(true)` | Boolean |
-| `typeOf([])` | Array |
-| `typeOf([1,2,3,4])` | Array |
-| `typeOf(0/0)` | NaN |
-| `typeOf(NaN)` | NaN |
-| `typeOf(parseInt)` | Function |
-Assume
+|  | Run | Output |
+| --- | --- | --- |
+|  Undefined | `typeOf()` | Undefined |
+|   | `typeOf(undefined)` | Undefined |
+|  Class | `typeOf(new Person("Narendra"))`| Person |
+|   | `typeOf(new Employee("Deepak", "Developer"))`| Employee |
+|   | `typeOf(new Date())` | Date |
+|   | `typeOf(Symbol("foo"))` | Symbol |
+|  String | `typeOf("")` | String |
+|   | `typeOf("---")` | String |
+|  Null | `typeOf(null)` | Null |
+|  Object | `typeOf({name: "Narendra"})` | Object |
+|   | `typeOf({})` | Object |
+|  Number | `typeOf(3.4)` | Number |
+|  Boolean | `typeOf(true)` | Boolean |
+|  Array | `typeOf([])` | Array |
+|   | `typeOf([1,2,3,4])` | Array |
+|  NaN | `typeOf(0/0)` | NaN |
+|   | `typeOf(NaN)` | NaN |
+|  Function | `typeOf(parseInt)` | Function |
+|   | `typeOf(()=>{})` | Function |
+
+Example setup for above test cases !
 ```js
 class Person {
   constructor(name) {
