@@ -26,5 +26,5 @@ if(typeOf(x) === "String"){
 | --- | --- | --- |
 |  | `typeOf()` | Undefined |
 |  | `typeOf(undefined)` | Undefined |
-| `class Person {constructor(name) {this.name = name;}}`| typeOf(new Person)| "Person" |
-| `class Employee extends Person {constructor(name, job) {super(name);this.job = job;}}`| typeOf(new Employee)| "Employee" |
+| `class Person {constructor(name) {this.name = name;}}`| `typeOf(new Person)`| Person |
+| `class Employee extends Person {constructor(name, job) {super(name);this.job = job;}}`| `typeOf(new Employee)`| Employee |
