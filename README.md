@@ -1,5 +1,6 @@
 # gettypeof
-getTypeOf - The missing function is JavaScript
+getTypeOf - The Smartest way to get Type* in JavaScript
+
 [![NPM version][npm-image]][npm-url]
 [![npm download][download-image]][download-url]
 
@@ -12,3 +13,17 @@ getTypeOf - The missing function is JavaScript
 
 [![gettypeof](https://nodei.co/npm/gettypeof.png?downloads=true)](https://npmjs.org/package/gettypeof)
 
+# Use
+```js
+import typeOf from "gettypeof"
+var x = "hello";
+if(typeOf(x) === "String"){
+    //This will be True
+}
+```
+
+# Input Output Table
+| Setup | In | Out |
+| --- | --- | --- |
+|  | `typeOf()` | Undefined |
+|  | `typeOf(undefined)` | Undefined |
