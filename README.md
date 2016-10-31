@@ -21,9 +21,10 @@ if(typeOf(x) === "String"){
     //This will be True
 }
 ```
-
 # Input Output Table
-| Setup | In | Out |
+| Setup | Run | Output |
 | --- | --- | --- |
 |  | `typeOf()` | Undefined |
 |  | `typeOf(undefined)` | Undefined |
+| ```js class Person {constructor(name) {this.name = name;}}```| typeOf(new Person)| "Person" |
+| ```js class Employee extends Person {constructor(name, job) {super(name);this.job = job;}}```| typeOf(new Employee)| "Employee" |
