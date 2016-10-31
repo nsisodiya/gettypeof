@@ -22,22 +22,35 @@ if(typeOf(x) === "String"){
 }
 ```
 # Input Output Table
-| Setup | Run | Output |
-| --- | --- | --- |
-|  | `typeOf()` | Undefined |
-|  | `typeOf(undefined)` | Undefined |
-| `class Person {constructor(name) {this.name = name;}}`| `typeOf(new Person)`| Person |
-| `class Employee extends Person {constructor(name, job) {super(name);this.job = job;}}`| `typeOf(new Employee)`| Employee |
-|  | `typeOf("")` | String |
-|  | `typeOf("---")` | String |
-|  | `typeOf(null)` | Null |
-|  | `typeOf({name: "Narendra"})` | Object |
-|  | `typeOf({})` | Object |
-|  | `typeOf(3.4)` | Number |
-|  | `typeOf(new Date())` | Date |
-|  | `typeOf(true)` | Boolean |
-|  | `typeOf([])` | Array |
-|  | `typeOf([1,2,3,4])` | Array |
-|  | `typeOf(0/0)` | NaN |
-|  | `typeOf(NaN)` | NaN |
-|  | `typeOf(parseInt)` | Function |
+| Run | Output |
+| --- | --- |
+| `typeOf()` | Undefined |
+| `typeOf(undefined)` | Undefined |
+| `typeOf(new Person("Narendra"))`| Employee |
+| `typeOf(new Employee("Deepak", "Developer"))`| Employee |
+| `typeOf("")` | String |
+| `typeOf("---")` | String |
+| `typeOf(null)` | Null |
+| `typeOf({name: "Narendra"})` | Object |
+| `typeOf({})` | Object |
+| `typeOf(3.4)` | Number |
+| `typeOf(new Date())` | Date |
+| `typeOf(true)` | Boolean |
+| `typeOf([])` | Array |
+| `typeOf([1,2,3,4])` | Array |
+| `typeOf(0/0)` | NaN |
+| `typeOf(NaN)` | NaN |
+| `typeOf(parseInt)` | Function |
+Assume
+```js
+class Person {
+  constructor(name) {
+    this.name = name;
+  }
+}
+class Employee extends Person {
+  constructor(name, job) {
+    super(name);
+    this.job = job;
+}}
+```
